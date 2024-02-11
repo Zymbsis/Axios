@@ -28,11 +28,17 @@
             name="text"
             required
             placeholder="Search images..."
-          /><button class="form-button" type="submit">Search</button>
+          /><button class="form-button" type="submit" name="submit">
+            Search
+          </button>
         </form>
         <ul class="gallery-container"></ul>
+        <div class="loader-wrapper">
+          <p class="loader">Loading images, please wait...</p>
+          <button class="loader-button" type="button">Load more</button>
+        </div>
       </div>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="axios.js"></script>
   </body>
 </html>

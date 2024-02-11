@@ -1,5 +1,5 @@
 import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import 'izitoast/dist/css/iziToast.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import octagon from './img/octagon.svg';
@@ -25,7 +25,6 @@ form.addEventListener('submit', e => {
   processingPixabayRequest();
   form.reset();
 });
-
 function pixabayRequest() {
   searchParams.set('q', input.value);
   return fetch(`https://pixabay.com/api/?${searchParams}`).then(response => {
@@ -85,7 +84,6 @@ function createPopUp(message) {
     ],
     onOpening() {
       galleryContainer.innerHTML = '';
-
       input.addEventListener('input', () => {
         const toast = document.querySelector('.my-iziToast');
         iziToast.hide(
